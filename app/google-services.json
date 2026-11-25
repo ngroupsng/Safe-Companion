@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "376967056521",
+    "project_id": "safecompanion-e5d8d",
+    "storage_bucket": "safecompanion-e5d8d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376967056521:android:954aea955c2c4940764a58",
+        "android_client_info": {
+          "package_name": "com.aistudio.safecompanion.qzvpk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8E9MusnhTCi4lpatVzOMhJqnbcvdQ11c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376967056521:android:954aea955c2c4940764a58",
+        "android_client_info": {
+          "package_name": "com.example"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8E9MusnhTCi4lpatVzOMhJqnbcvdQ11c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

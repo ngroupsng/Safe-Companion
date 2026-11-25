@@ -1,0 +1,6 @@
+{
+  "name": "Safe Companion",
+  "description": "Safe Companion - Personal journey monitoring, emergency alerts, trusted contacts, and community safety hazard reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

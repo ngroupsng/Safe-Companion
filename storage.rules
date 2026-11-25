@@ -1,0 +1,31 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Emergency voice recordings
+    // Path format: emergency_voice/{userId}/{emergencyId}/{voiceFile}
+    // Only the authenticated user can upload their own emergency voice notes
+    // Files must be audio, reasonable size (< 25MB), and unauthenticated access is forbidden
+    match /emergency_voice/{userId}/{emergencyId}/{voiceFile} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId)
+                    && request.resource.size < 25 * 1024 * 1024
+                    && request.resource.contentType.matches('audio/.*');
+      allow update: if false; // Immutability of recorded emergency voice notes
+      allow delete: if isOwner(userId);
+    }
+
+    // Default deny all other paths
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
